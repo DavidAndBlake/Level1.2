@@ -1,0 +1,40 @@
+package randomNum;
+
+import java.awt.Frame;
+import java.awt.Toolkit;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class RandomNum {
+	
+	public int screenWidth;
+	public int screenHeight;
+	
+	public static void main(String[] args) {
+		RandomNum randomNum = new RandomNum();
+		randomNum.everything();
+		
+	}
+	private void everything() {
+		JFrame frame = new JFrame();
+		JPanel panel = new JPanel();
+		JButton button = new JButton();
+		button.setText("Click this button");
+		panel.add(button);
+		frame.add(panel);
+		frame.setVisible(true);
+		panel.setVisible(true);
+		button.setVisible(true);
+		screenSetting();
+		frame.setSize(screenWidth, screenHeight);
+	}
+	public void screenSetting()
+	{
+		screenHeight = (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight();
+		screenWidth = (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth();
+		
+	}
+	
+}

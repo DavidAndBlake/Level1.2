@@ -1,0 +1,17 @@
+package randomNum;
+
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
+public class RandomNum {
+	JFrame frame;
+	
+	public static void main(String[] args) {
+		
+		JOptionPane.showMessageDialog(null, (int)( Math.random()*100));
+	}
+	
+	RandomNum(){
+		
+	}
+}

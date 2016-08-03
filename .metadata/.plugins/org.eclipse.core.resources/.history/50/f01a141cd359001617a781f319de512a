@@ -1,0 +1,21 @@
+package randomNum;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class RandomNum {
+	
+	public static void main(String[] args) {
+		JFrame frame = new JFrame();
+		JPanel panel = new JPanel();
+		JButton button = new JButton();
+		button.setText("Click this button");
+		panel.add(button);
+		frame.add(panel);
+		frame.setVisible(true);
+		panel.setVisible(true);
+		button.setVisible(true);
+	}
+	
+}

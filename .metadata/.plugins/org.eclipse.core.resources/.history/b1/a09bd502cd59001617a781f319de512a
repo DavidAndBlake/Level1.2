@@ -1,0 +1,10 @@
+package randomNum;
+
+import javax.swing.JOptionPane;
+
+public class randomNum {
+
+	public static void main(String[] args) {
+		JOptionPane.showMessageDialog(null, Math.random()*10);
+	}
+}
