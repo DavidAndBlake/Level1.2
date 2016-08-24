@@ -1,3 +1,5 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.net.URI;
 
 import javax.swing.JButton;
@@ -6,13 +8,14 @@ import javax.swing.JPanel;
 
 //Make a user interface with 3 buttons that will play different videos depending on which button is clicked. Use the methods below to play the cutest videos ever.
 //
-public class CutenessTV
+public class CutenessTV implements ActionListener
 {
 	private JFrame frame;
 	private JPanel panel;
 	private JButton button1;
 	private JButton button2;
 	private JButton button3;
+	
 
 public static void main(String[] args)
 {
@@ -30,8 +33,11 @@ public void makeGUI()
 	button2 = new JButton();
 	button3 = new JButton();
 	panel.add(button1);
+	button1.addActionListener(this);
 	panel.add(button2);
+	button2.addActionListener(this);
 	panel.add(button3);
+	button3.addActionListener(this);
 }
 
 	
@@ -56,5 +62,22 @@ public void makeGUI()
 			e.printStackTrace();
 		}
 	
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		if (e.getSource() == button1)
+		{
+			showDucks();
+		}
+		if (e.getSource() == button2)
+		{
+			showFrog();
+		}
+		if (e.getSource() == button3)
+		{
+			showFluffyUnicorns();
+		}
 	}
 }
