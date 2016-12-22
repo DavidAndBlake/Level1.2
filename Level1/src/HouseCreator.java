@@ -1,0 +1,35 @@
+import java.awt.Color;
+
+import org.jointheleague.graphical.robot.Robot;
+
+public class HouseCreator {
+boolean alive;
+Robot johnny5;
+int x;
+int y;
+public HouseCreator(){
+	alive = true;
+	johnny5 = new Robot();
+}
+void moveToCorner(){
+	johnny5.moveTo(100, 700);
+}
+void drawHouseWithGrass(){
+	johnny5.penDown();
+	johnny5.setSpeed(10);
+	johnny5.setPenWidth(5);
+	johnny5.move(100);
+	johnny5.turn(45);
+	johnny5.setPenColor(200, 50, 100);
+	johnny5.move(50);
+	johnny5.turn(90);
+	johnny5.move(50);
+	johnny5.turn(45);
+	johnny5.setPenColor(2, 5, 100);
+	johnny5.move(100);
+	johnny5.setPenColor(Color.green);
+	johnny5.turn(-90);
+	
+	johnny5.move(75);
+}
+}
