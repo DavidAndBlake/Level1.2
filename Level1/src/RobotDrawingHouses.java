@@ -4,7 +4,8 @@ public class RobotDrawingHouses {
 
 		HouseCreator creator = new HouseCreator();
 		creator.moveToCorner();
-		creator.drawHouseWithGrass();
+		for (int i = 0; i < 9; i++) {
+			creator.draw1FlatHouseWithGrass();
+		}
 	}
 }
-
